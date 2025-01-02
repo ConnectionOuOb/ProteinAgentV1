@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alphafold Webserver</title>
+	<style>
+#div_top {
+	width : 100%;
+	height : 7em;
+	z-index : 9;
+	position : absolute;
+	background-color : aqua;
+}
+
+#div_content {
+	width : 100%;
+	z-index : 1;
+	position : absolute;
+	padding-top : 10em;
+}
+
+#div_footer {
+	width : 100%;
+	bottom : 0;
+	z-index : 1;
+	padding : 1em;
+	position : fixed;
+	text-align : center;
+	background-color : aqua;
+}
+
+font {
+	color : purple;
+	font-family : Verdana;
+}
+
+input {
+	height  : 3em;
+	width   : 50%;
+	padding : 0.5em;
+}
+
+* {
+	margin : 0;
+	padding : 0;
+}
+button {
+	padding : 0.5em;
+}
+	</style>
+</head>
+<body>
+	<div id="div_top">
+		<h1 align="center">
+			<br>
+			<font>Alphafold Webserver</font>
+		</h1>
+	</div>
+	<div id="div_content">
+		<center>
+			<font face="微軟正黑體" size="4">
+				<br>本網站旨在提供便捷簡易的方式
+				<br>以及運算資源做 Alphafold運算 
+				<br>使用，因伺服器資源有限，會限
+				<br>制同時執行一筆，( 平均執行時
+				<br>間0.5小時/筆 )提交後請勿關閉
+				<br>網頁，運算完後會跳轉到對應的
+				<br>工作資料夾，這個資料夾顯示結
+				<br>果，可以逕行下載所需結果檔：
+			</font>
+			<form action="/" method="post" enctype="multipart/form-data">
+				<br>
+				<font face="微軟正黑體" size="4">
+					<br>填寫要預測的"純序列"，如:
+					<br>&nbsp;MVPMLWLTAYMAVAVLTAILLNVVYQLFFRLWN
+				</font>
+				<br>
+				<input type="text" name="UserSequ" required>
+				<br><br>
+				<button type="submit">Submit</button>
+			</form>
+			<font face="微軟正黑體" size="3">
+				<br>1. 核心程式來源自 Alphafold Github
+				<br>https://github.com/deepmind/alphafold<br>
+				<br>2. 如果有問題請聯絡
+				<br>connection.bt07@nycu.edu.tw<br>
+			</font>
+		</center>
+		<br><br><br><br><br>
+		<div id="div_footer">
+			<font>
+				<a href="https://dbt.nctu.edu.tw/#1">
+					Biological Science and Technology,
+				</a>
+				&nbsp;
+				<a href="https://www.nctu.edu.tw/">
+					National Chiao Tung University
+				</a>
+				&nbsp;
+				© LI,YAN-JIE 2022
+			</font>
+		</div>
+	</div>
+</body>
+</html>
+
